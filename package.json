@@ -1,0 +1,22 @@
+{
+  "name": "nodeJsSamples",
+  "version": "0.0.0",
+  "description": "nodeJsSamples =============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uryyyyyyy/nodeJsSamples.git"
+  },
+  "author": "uryyyyyyy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uryyyyyyy/nodeJsSamples/issues"
+  },
+  "homepage": "https://github.com/uryyyyyyy/nodeJsSamples",
+  "dependencies": {
+    "csvtojson": "^0.3.13"
+  }
+}
