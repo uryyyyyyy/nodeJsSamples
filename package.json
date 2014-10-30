@@ -1,8 +1,8 @@
 {
   "name": "nodeJsSamples",
   "version": "0.0.0",
-  "description": "nodeJsSamples =============",
-  "main": "index.js",
+  "description": "",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,10 @@
   "homepage": "https://github.com/uryyyyyyy/nodeJsSamples",
   "dependencies": {
     "csvtojson": "^0.3.13"
+  },
+  "devDependencies": {
+    "lodash": "^2.4.1",
+    "log": "^1.4.0",
+    "mysql": "https://registry.npmjs.org/mysql/-/mysql-2.5.2.tgz"
   }
 }
