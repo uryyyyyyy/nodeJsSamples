@@ -22,6 +22,7 @@
   "devDependencies": {
     "lodash": "^2.4.1",
     "log": "^1.4.0",
-    "mysql": "https://registry.npmjs.org/mysql/-/mysql-2.5.2.tgz"
+    "mysql": "https://registry.npmjs.org/mysql/-/mysql-2.5.2.tgz",
+    "node-curl": "^0.3.3"
   }
 }
