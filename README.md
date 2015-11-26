@@ -11,5 +11,16 @@ nodeJsSamples
 
 ## test
 
+### on terminal
+
 `./node_modules/mocha/bin/mocha test/<any Dir>/utilTest.js`
 
+### on Webstorm
+
+run -> edit configuration -> "+" -> mocha
+
+options
+
+- `--require intelli-espower-loader`
+
+then, jump to target test, and Ctrl + Shift + F10.
