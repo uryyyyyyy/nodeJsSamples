@@ -1,8 +1,8 @@
 
-function logUtil () {
-	var Log = require('log')
-	var fs = require('fs')
-	var stream = fs.createWriteStream(__dirname + '/log/' + new Date() + '.log')
+exports.log = function() {
+	var Log = require('log');
+	var fs = require('fs');
+	var stream = fs.createWriteStream(__dirname + '/' + new Date() + '.log');
 	var log = new Log(Log.DEBUG, stream);
 	
 	return{
@@ -14,9 +14,7 @@ function logUtil () {
 		},
 		console : function(msg){
 			console.log(msg);
-		},
+		}
 	}
-}
-
-module.exports = logUtil;
+};
 
