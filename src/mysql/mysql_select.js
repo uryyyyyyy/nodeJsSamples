@@ -1,7 +1,7 @@
 
 var Bacon = require('baconjs');
-var logger = require('../libs/logUtil.js')();
-var client = require('../libs/mysqlClient.js')(logger, 'my_db');
+var logger = require('../log/logUtil.js')();
+var client = require('mysqlClient.js')(logger, 'my_db');
 
 var sql = 'SELECT * from users where user_id = ?';
 
