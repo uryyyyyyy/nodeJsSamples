@@ -13,7 +13,7 @@ nodeJsSamples
 
 ### on terminal
 
-`./node_modules/mocha/bin/mocha test/<any Dir>/utilTest.js`
+`./node_modules/mocha/bin/mocha test/<any Dir>/utilTest.js --require enable-power-assert.js`
 
 ### on Webstorm
 
