@@ -1,3 +1,5 @@
+
+require('es6-promise').polyfill();
 var util = require('./util');
 var async = require('asyncawait/async');
 var await = require('asyncawait/await');

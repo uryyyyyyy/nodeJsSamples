@@ -1,5 +1,4 @@
 'use strict';
-var Promise = require('bluebird');
 
 exports.promiseSucc = new Promise(function(resolve, reject) {
 	setTimeout(function() {

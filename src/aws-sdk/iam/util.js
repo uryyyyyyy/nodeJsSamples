@@ -1,5 +1,4 @@
 var AWS = require('aws-sdk');
-var Promise = require("bluebird");
 
 exports.initialize = function(region) {
     AWS.config.region = region;

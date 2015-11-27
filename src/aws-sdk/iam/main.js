@@ -1,7 +1,7 @@
 'use strict';
+require('es6-promise').polyfill();
 
 var util = require('./util');
-var Promise = require("bluebird");
 
 var iam = util.initialize('ap-northeast-1');
 
