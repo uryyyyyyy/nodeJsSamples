@@ -1,5 +1,6 @@
 var util = require('./util');
-var Promise = require('bluebird');
+var async = require('asyncawait/async');
+var await = require('asyncawait/await');
 
 var onSuccess = function(value) {
     console.log("onSuccess");
@@ -11,8 +12,14 @@ var onFailure = function(value) {
     console.log(value);
 };
 
+var func = async (function () {
+    var res1 = await (util.promiseSucc);
+    var res2 = await (util.promiseSucc);
+    return res1 + " " + res2;
+});
 
-util.promiseSucc.then(onSuccess).catch(onFailure);
+
+func().then(onSuccess).catch(onFailure);
 
 util.promiseFail.then(onSuccess).catch(onFailure);
 

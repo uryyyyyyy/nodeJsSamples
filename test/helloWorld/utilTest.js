@@ -12,7 +12,7 @@ describe('util', function(){
 
         it('should return hello Hi', function(){
             var str = util.hello("Hi");
-            assert(str === "hello H");
+            assert(str === "hello Hi");
         });
     });
 });
