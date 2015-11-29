@@ -12,21 +12,40 @@ var connection = mysql.createPool({
 });
 
 var select = function(conn, sql, paramArray){
-    return function(callback){
+
+    return new Promise(function(resolve, reject) {
         console.log(sql);
         conn.query(sql, paramArray, function(err, rows) {
             if(err){
                 console.error('error message is ');
                 console.error(err);
-                throw err;
+                reject(err);
             }
             if(rows){
                 console.log('result is');
                 console.log(rows);
-                callback(rows);
+                resolve(rows);
             }
         });
-    }
+    });
+};
+
+var insert = function(conn, postData, sql){
+    return new Promise(function(resolve, reject){
+        console.log(sql);
+        conn.query(sql, postData, function(err, result) {
+            if(err){
+                console.error('error message is ');
+                console.error(err);
+                reject(err);
+            }
+            if(result){
+                console.log('result is');
+                console.log(result);
+                resolve(result);
+            }
+        });
+    });
 };
 
 var close = function(conn){
@@ -34,6 +53,14 @@ var close = function(conn){
 };
 
 
-var sql = 'SELECT * from users where user_id = ?';
+var func = async (function (conn) {
+    var sql1 = 'SELECT * from users where user_id = ?';
+    var sql2 = 'SELECT * from users where user_id = ?';
+    var res1 = await (select(conn, sql1, ['admin']));
+    var res2 = await (insert(conn, data, sql2));
+    console.log(res1);
+    console.log(res2);
+    close(conn);
+});
 
-Bacon.fromCallback(client.select(sql, ['admin'])).onValue(client.close);
+func(connection);
